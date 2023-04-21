@@ -6,12 +6,15 @@
 
 * [C Star Pattern Codes](#c-pattern-codes)
     * [Square Pattern](#1-square-pattern)
-    * [Hallow Square Pattern](#2-hallow-square-pattern)
+    * [Hollow Square Pattern](#2-hollow-square-pattern)
     * [Right Triangle Pattern](#3-right-triangle-pattern)
     * [Inverted Right Triangle Pattern](#4-inverted-right-triangle-pattern)
     * [Left Triangle Pattern](#5-left-triangle-pattern)
     * [Inverted Left Triangle Pattern](#6-inverted-left-triangle-pattern)
-    * [Hallow Triangle Pattern](#7-hallow-triangle-pattern)
+    * [Hollow Triangle Pattern](#7-hollow-triangle-pattern)
+    * [Pyramid Pattern](#8-pyramid-star-pattern)
+    * [Hollow Pyramid Pattern](#9-hollow-pyramid-pattern)
+    * [Inverted Pyramid Pattern](#10-inverted-pyramid-pattern)
 
 # C Star Pattern Codes
 ## 1. Square Pattern
@@ -42,7 +45,7 @@ int main() {
 *****
 ```
 
-## 2. Hallow Square Pattern
+## 2. Hollow Square Pattern
 ``` c
 #include <stdio.h>
 
@@ -199,7 +202,7 @@ int main() {
 **
 *
 ```
-## 7. Hallow Triangle Pattern
+## 7. Hollow Triangle Pattern
 > It is like the triangle but it has the Hallow Space in the Middle
 ``` c
 #include <stdio.h>
@@ -240,5 +243,103 @@ int main() {
 *  *
 *   *
 ******
+```
+## 8. Pyramid Star Pattern
+``` c
+#include <stdio.h>
+
+int main() {
+  //take the size
+  //or take user input by scan Function
+  int size = 5;
+
+  // creating pyramid
+  for (int i = 0; i < size; i++) {
+    // print spaces before stars
+    for (int j = 0; j < size-i-1; j++) {
+      printf(" ");
+    }
+    // print stars
+    for (int k = 0; k < 2*i+1; k++) {
+      printf("*");
+    }
+    printf("\n");
+  }
+  return 0;
+}
+```
+## Output
+``` c
+    *
+   ***
+  *****
+ *******
+*********
+```
+
+## 9. Hollow Pyramid Pattern
+``` c
+#include <stdio.h>
+
+int main() {
+  // size of the pyramid
+  // or take user input by scan Function
+  int size = 5;
+  for (int  i = 0; i < size; i++) {
+    // print spaces
+    for (int j = 0; j < size-i-1; j++) {
+      printf(" ");
+    }
+    // print stars
+    for (int k = 0; k < 2*i+1; k++) {
+      if(k == 0 || k == 2*i || i == size-1) {
+        printf("*");
+      } else {
+        printf(" ");
+      }
+    }
+    printf("\n");
+  }
+  return 0;
+}
+```
+## Output
+``` c
+    *
+   * *
+  *   *
+ *     *
+*********
+```
+
+## 10. Inverted Pyramid Pattern
+``` c
+#include <stdio.h>
+
+int main() {
+  // size of the pyramid
+  // or take user input by scan Function
+  int size = 5;
+  for (int i = 0; i < size; i++) {
+    // print spaces
+    for (int j = 0; j < i; j++) {
+      printf(" ");
+    }
+    // print stars
+    for (int k = 0; k < 2*(size-i)-1; k++) {
+      printf("*");
+    }
+    printf("\n");
+  }
+  return 0;
+}
+```
+## Output
+``` c
+*********
+ *******
+  *****
+   ***
+    *
 ```
 
