@@ -15,6 +15,8 @@
     * [Pyramid Pattern](#8-pyramid-star-pattern)
     * [Hollow Pyramid Pattern](#9-hollow-pyramid-pattern)
     * [Inverted Pyramid Pattern](#10-inverted-pyramid-pattern)
+    * [Diamond Pattern](#11-diamond-pattern)
+    * [Hollow Diamond Pattern](#12-hollow-diamond-pattern)
 
 # C Star Pattern Codes
 ## 1. Square Pattern
@@ -340,6 +342,111 @@ int main() {
  *******
   *****
    ***
+    *
+```
+## 11. Diamond Pattern
+``` c
+#include <stdio.h>
+
+int main() {
+  // size of Diamond
+  // or take user input by scan Function
+  int size = 5;
+  // upside pyramid
+  for (int i = 1; i <= size; i++) {
+    // printing spaces
+    for (int j = size; j > i; j--) {
+      printf(" ");
+    }
+    // printing star
+    for (int k = 0; k < i*2-1; k++) {
+      printf("*");
+    }
+    printf("\n");
+  }
+  // downside pyramid
+  for (int i = 1; i <= size-1; i++) {
+    // printing spaces
+    for (int j = 0; j < i; j++) {
+      printf(" ");
+    }
+    // printing star
+    for (int k = (size-i)*2-1; k > 0; k--) {
+      printf("*");
+    }
+    printf("\n");
+  }
+  return 0;
+}
+```
+## Output
+```
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+```
+
+## 12. Hollow Diamond Pattern
+``` c
+#include <stdio.h>
+
+int main() {
+  // size of hollow Diamond
+  // or take user input by scan Function
+  int size = 5;
+  // upside pyramid
+  for (int i = 1; i <= size; i++) {
+    // printing spaces
+    for (int j = size; j > i; j--) {
+      printf(" ");
+    }
+    // printing star
+    for (int k = 0; k < i*2-1; k++) {
+      if (k == 0 || k == 2*i-2) {
+        printf("*");
+      }
+      else {
+        printf(" ");
+      }
+    }
+    printf("\n");
+  }
+  // downside triangle
+  for (int i = 1; i < size; i++) {
+    // printing spaces
+    for (int j = 0; j < i; j++) {
+      printf(" ");
+    }
+    // printing star
+    for (int k = (size-i)*2-1; k >= 1; k--) {
+      if (k == 1 || k == (size-i)*2-1) {
+        printf("*");
+      }
+      else {
+        printf(" ");
+      }
+    }
+    printf("\n");
+  }
+  return 0;
+}
+```
+## Output
+``` c
+    *
+   * *
+  *   *
+ *     *
+*       *
+ *     *
+  *   *
+   * *
     *
 ```
 
