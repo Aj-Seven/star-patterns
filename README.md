@@ -17,6 +17,8 @@
     * [Inverted Pyramid Pattern](#10-inverted-pyramid-pattern)
     * [Diamond Pattern](#11-diamond-pattern)
     * [Hollow Diamond Pattern](#12-hollow-diamond-pattern)
+    * [Right Pascal Pattern](#13-right-pascal-pattern)
+    * [Left Pascal Pattern](#14-left-pascal-pattern)
 
 # C Star Pattern Codes
 ## 1. Square Pattern
@@ -447,6 +449,86 @@ int main() {
  *     *
   *   *
    * *
+    *
+```
+## 13. Right Pascal Pattern
+``` c
+#include <stdio.h>
+
+int main() {
+  // size right pasal triangle
+  // or take user input by scan Function
+  int size = 5;
+
+  for (int i = 1; i <= size; i++) {
+    for (int j = 0; j < i; j++) {
+      printf("*");
+    }
+    printf("\n");
+  }
+  
+  for (int i = 1; i <= size-1; i++) {
+    for (int j = 0; j < size-i; j++) {
+      printf("*");
+    }
+    printf("\n");
+  }
+  return 0;
+}
+```
+## Output
+``` c
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+```
+
+## 14. Left Pascal Pattern
+``` c
+#include <stdio.h>
+
+int main() {
+  // size left pasal triangle
+  // or take user input value by scan Function
+  int size = 5;
+
+  for (int i = 1; i <= size; i++) {
+    for (int j = 0; j < size-i; j++) {
+      printf(" ");
+    }
+    for (int k = 0; k < i; k++) {
+      printf("*");
+    }
+    printf("\n");
+  }
+  for (int i = 1; i <= size-1; i++) {
+    for (int j = 0; j < i; j++) {
+      printf(" ");
+    }
+    for (int k = 0; k < size-i; k++) {
+      printf("*");
+    }
+    printf("\n");
+  }
+  return 0;
+}
+```
+## Output
+``` c
+    *
+   **
+  ***
+ ****
+*****
+ ****
+  ***
+   **
     *
 ```
 
