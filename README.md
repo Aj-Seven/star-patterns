@@ -9,6 +9,8 @@
     * [Hallow Square Pattern](#2-hallow-square-pattern)
     * [Right Triangle Pattern](#3-right-triangle-pattern)
     * [Inverted Right Triangle Pattern](#4-inverted-right-triangle-pattern)
+    * [Left Triangle Pattern](#5-left-triangle-pattern)
+    * [Inverted Left Triangle Pattern](#6-inverted-left-triangle-pattern)
 
 # C Star Pattern Codes
 ## 1. Square Pattern
@@ -143,4 +145,57 @@ int main() {
     *
 ```
 
+## 5. Left Triangle Pattern
+``` c
+#include <stdio.h>
+
+int main() {
+  // take size of triangle
+  // or take user input by scan Function
+  int size = 5;
+  
+  for (int i = 0; i < size; i++) {
+    // printing star in a row
+    for (int j = 0; j <= i; j++) {
+      printf("*");
+    }
+    printf("\n");
+  }
+  return 0;
+}
+```
+## Output
+``` c
+*
+**
+***
+****
+*****
+```
+## 6. Inverted Left Triangle Pattern
+``` c
+#include <stdio.h>
+
+int main() {
+  // size of the triangle
+  int size = 5;
+
+  for (int i = 0; i < size; i++) {
+    // printing stars
+    for (int j = 0; j < size-i; j++) {
+      printf("*");
+    }
+    printf("\n");
+  }
+  return 0;
+}
+```
+## Output
+``` c
+*****
+****
+***
+**
+*
+```
 
