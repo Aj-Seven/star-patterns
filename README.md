@@ -11,6 +11,7 @@
     * [Inverted Right Triangle Pattern](#4-inverted-right-triangle-pattern)
     * [Left Triangle Pattern](#5-left-triangle-pattern)
     * [Inverted Left Triangle Pattern](#6-inverted-left-triangle-pattern)
+    * [Hallow Triangle Pattern](#7-hallow-triangle-pattern)
 
 # C Star Pattern Codes
 ## 1. Square Pattern
@@ -197,5 +198,47 @@ int main() {
 ***
 **
 *
+```
+## 7. Hallow Triangle Pattern
+> It is like the triangle but it has the Hallow Space in the Middle
+``` c
+#include <stdio.h>
+
+int main() {
+
+  // take the size
+  // or take user input by scan Function
+  int size = 5;
+
+  // creating hollow triangle
+  for (int i = 1; i <= size; i++) {
+    for (int j = 0; j < i; j++) {
+      // operation of non-last row
+      if (i != size) {
+        // 1st or last position of row print star
+        if (j == 0 || j == i-1) {
+          printf("*");
+        } else {
+          printf(" ");
+        }
+      }
+      // last row print only star
+      else {
+        printf("*");
+      }
+    }
+    printf("\n");
+  }
+  return 0;
+}
+```
+## Output
+``` c
+*
+**
+* *
+*  *
+*   *
+******
 ```
 
