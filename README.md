@@ -7,7 +7,8 @@
 * [C Star Pattern Codes](#c-pattern-codes)
     * [Square Pattern](#1-square-pattern)
     * [Hallow Square Pattern](#2-hallow-square-pattern)
-
+    * [Right Triangle Pattern](#3-right-triangle-pattern)
+    * [Inverted Right Triangle Pattern](#4-inverted-right-triangle-pattern)
 
 # C Star Pattern Codes
 ## 1. Square Pattern
@@ -16,7 +17,7 @@
 
 int main() {
   // take a size
-  // you can take user input
+  // you can take user input by scan Function
   int size = 5;
   // external loop
   for (int i = 0; i < size; i++) {
@@ -44,6 +45,7 @@ int main() {
 
 int main() {
   // size of the square
+  // or take user input by scan Function
   int size = 5;
   // external loop
   for (int i = 0; i < size; i++) {
@@ -76,6 +78,69 @@ int main() {
 *   *
 *   *
 *****
+```
+## 3. Right Triangle Pattern
+``` c
+#include <stdio.h>
+
+int main() {
+  // set size
+  // or take user input by scan Function
+  int size = 5;
+
+  for (int i = 0; i < size; i++) {
+    // printing spaces before stars
+    for (int j = 1; j < size-i; j++) {
+      printf(" ");
+    }
+    // printing stars
+    for (int k = 0; k <= i; k++) {
+      printf("*");
+    }
+    printf("\n");
+  }
+  return 0;
+}
+```
+## Output
+``` c
+    *
+   **
+  ***
+ ****
+*****
+```
+
+## 4. Inverted Right Triangle Pattern
+``` c
+#include <stdio.h>
+
+int main() {
+  // take size
+  // or take user input by scan Function
+  int size = 5;
+
+  for (int i = 0; i < size; i++) {
+    // printing spaces
+    for (int j = 0; j < i; j++) {
+      printf(" ");
+    }
+    // printing stars
+    for (int j = size; j > i; j--) {
+      printf("*");
+    }
+    printf("\n");
+  }
+  return 0;
+}
+```
+## Output
+``` c
+*****
+ ****
+  ***
+   **
+    *
 ```
 
 
